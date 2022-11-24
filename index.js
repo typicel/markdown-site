@@ -29,7 +29,7 @@ function createBlogPost(post){
     return template; 
 }
 
-// Creates routes for every page in the pages folder
+// Generates HTML files for the main pages
 fs.readdirSync('./content').forEach(file => {
     if(!file.endsWith('.md')) return;
 
@@ -40,7 +40,7 @@ fs.readdirSync('./content').forEach(file => {
     fs.writeFileSync(`./public/${page}.html`, html);
 });
 
-
+// Generates HTML files for each blog post
 fs.readdirSync('./content/posts').forEach(file => {
     if(!file.endsWith('.md')) return;
 
@@ -49,40 +49,13 @@ fs.readdirSync('./content/posts').forEach(file => {
     fs.writeFileSync(`./public/posts/${post}.html`, html);
 });
 
-// Route for each individual post
-// app.get('/posts/:post_name', (req, res) => {
-//     res.send(createBlogPost(req.params.post_name));
-// });
+// Generates an HTML page that lists all blog posts
+let posts = fs.readdirSync('./content/posts').map(file => {
+    let post = file.split('.')[0];
+    return `<h2><a href="posts/${post}.html">${post}</a></h2>`;
+});
 
-// // Route to list all posts
-// app.get('/posts', (req, res) => {
-//     let html = '';
+let template = fs.readFileSync('template.html', 'utf8');
+template = template.replace('{{content}}', posts);
+fs.writeFileSync('./public/posts.html', template);
 
-//     fs.readdirSync('pages/posts').forEach(post => {
-//         let content = fs.readFileSync (`./pages/posts/${post}`, 'utf8');
-//         let title = content.split('\n')[0].replace('# ', '');
-//         html += `<h2><a href="/posts/${post.split('.')[0]}">${title}</a></h2>`;
-//     });
-
-//     let template = fs.readFileSync('public/template.html', 'utf8');
-
-//     template = template.replace('{{content}}', html);
-//     res.send(template);
-// });
-
-// // Redirect to /home
-// app.get('/', (req, res) => {
-//     res.redirect('/home');
-// });
-
-// // Error page
-// app.get('*', (req, res) => {
-//     res.status(404).send(createPage('404'));
-// })
-
-// module.exports = app;
-// module.exports.handler = serverless(app);
-
-// app.listen(process.env.PORT || port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`);
-// });
