@@ -58,12 +58,12 @@ let posts = fs.readdirSync('./content/posts').map(file => {
     return `<h2><a href="posts/${post}.html">${post}</a></h2>`;
 });
 
+let template = fs.readFileSync('template.html', 'utf8');
 if (numPosts === 0) {
     let message = "<h2>Nothing to see here... for now.</h2>";
-    let template = fs.readFileSync('template.html', 'utf8');
     template = template.replace('{{content}}', message);
+    fs.writeFileSync('./public/posts.html', template)
 } else {
-    let template = fs.readFileSync('template.html', 'utf8');
     template = template.replace('{{content}}', posts);
     fs.writeFileSync('./public/posts.html', template);
 }
