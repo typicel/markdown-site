@@ -51,6 +51,8 @@ fs.readdirSync('./content/posts').forEach(file => {
 // Generates an HTML page that lists all blog posts
 let numPosts = 0;
 let posts = fs.readdirSync('./content/posts').map(file => {
+    if (!file.endsWith('.md')) return;
+
     numPosts += 1;
     let post = file.split('.')[0];
     return `<h2><a href="posts/${post}.html">${post}</a></h2>`;
