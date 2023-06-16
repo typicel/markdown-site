@@ -1,3 +1,3 @@
-# I promise I'll stop making new websites soon
+# typicel.me
 
-Uses express and showdown for static site generation
+My personal website

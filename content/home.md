@@ -1,9 +1,8 @@
-# Hi
-
-This is my (new) website where I'll be posting anything I've created or things I'm currently working on.
-
-I'm currently busy with school so I don't have a lot of time to make things on my own time, but I'll try.
-
+# Hello 
+I work on things that sometimes go on the Internet.
 
 If you want to look at things I'm working on currently, check [here.](/now)
-If you want to see things I've made already, check [here.](/projects)
+If you want to see things I've already made, check [here.](/projects)
+
+If you ned to reach me, you can email me at `mail @ this domain`
+I'm also available on [Github](https://github.com/typicel) and [Twitter](https://twitter.com/endatronix)
