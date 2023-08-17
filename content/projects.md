@@ -2,15 +2,14 @@
 
 These are all things that I've created in the past. Most of these I'm not working on anymore, either because they were for a class or I'm lazy.
 
+## Image Sequencer
+Plays images from a directory in sequence.
+[View on Github](https://github.com/typicel/image-sequence)
+
 ## Schoolweek
 A task management web app built with React
 [View on Github](https://github.com/typicel/schoolweek)
 [Visit Site](https://schoolweek.typicel.me)
-
-## Sticky Board
-A blank canvas where you can place sticky notes with text anywhere on the screen. Built with React.
-[View on Github](https://github.com/typicel/sticky-board)
-[Visit Site](https://sticky.typicel.me)
 
 ## Threaded Resolver
 A multi-threaded DNS resolver created as a project for my Operating Systems class.
