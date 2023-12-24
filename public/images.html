@@ -37,11 +37,11 @@
             justify-content: center;
             line-height:0;
             -webkit-column-count:5; /* split it into 5 columns */
-            -webkit-column-gap:5px; /* give it a 5px gap between columns */
+            -webkit-column-gap:10px; /* give it a 5px gap between columns */
             -moz-column-count:5;
-            -moz-column-gap:5px;
+            -moz-column-gap:10px;
             column-count:5;
-            column-gap:5px;
+            column-gap:10px;
             margin-top: 2rem;
         }
 
@@ -84,9 +84,8 @@
             }
         }
 
-        #darkbox { width:1280px; height:720px; position:absolute; top:0; left:0; background-color:#333; overflow: hidden; text-align:center;}
-        .darkboximg { padding:5%; max-width: 1216px; max-height: 684px; }
-
+        #darkbox { width: 1280px; height:720px; background-color: #555; position:absolute; top:0; left:0; overflow: hidden; text-align:center;}
+        .darkboximg { padding: 5%; max-width: 1216px; max-height: 684px; }
     </style>
 </head>
 
@@ -133,7 +132,7 @@
 
                 let div = document.createElement("div");
                 div.id = "darkbox";
-                div.innerHTML = `<img class="darkboximg" src="${url}" />`
+                div.innerHTML = `<img class="darkboximg" src="${url}" />`;
                 document.body.appendChild(div);
 
                 let box = document.getElementById('darkbox');
