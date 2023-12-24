@@ -46,6 +46,7 @@
             width: 200% !important;
             height: auto !important;
             margin-bottom: 5px;
+            cursor: pointer;
         }
 
         @media (max-width: 1200px) {
@@ -80,6 +81,9 @@
             }
         }
 
+        #darkbox { width:1280px; height:720px; position:absolute; top:0; left:0; background-color:#333; overflow: hidden; text-align:center;}
+        .darkboximg { padding:5%; max-width: 1216px; max-height: 684px; }
+
     </style>
 </head>
 
@@ -90,19 +94,21 @@
             <a href="/">Home</a>
             <a href="/now">Now</a>
             <a href="/projects">Projects</a>
-            <a href="/images">Photography</a>
+            <a href="/images">Gallery</a>
             <a href="/posts">Posts</a>
         </div>
     </header>
 
     <div id="gallery">
-        <img src="images/R1-06467-001A.JPG">
-        <img src="images/R1-06467-002A.JPG">
-        <img src="images/R1-06467-009A.JPG">
-        <img src="images/R1-06467-014A.JPG">
-        <img src="images/R1-06467-016A.JPG">
-        <img src="images/R1-06467-027A.JPG">
-        <img src="images/R1-06467-033A.JPG">
+        <img src="images/R1-06467-001A.JPG" onclick="showDarkbox('images/R1-06467-001A.JPG')">
+        <img src="images/R1-06467-002A.JPG" onclick="showDarkbox('images/R1-06467-002A.JPG')">
+        <img src="images/R1-06467-009A.JPG" onclick="showDarkbox('images/R1-06467-009A.JPG')">
+        <img src="images/R1-06467-014A.JPG" onclick="showDarkbox('images/R1-06467-014A.JPG')">
+        <img src="images/R1-06467-016A.JPG" onclick="showDarkbox('images/R1-06467-016A.JPG')">
+        <img src="images/R1-06467-027A.JPG" onclick="showDarkbox('images/R1-06467-027A.JPG')">
+        <img src="images/R1-06467-033A.JPG" onclick="showDarkbox('images/R1-06467-033A.JPG')">
+        <img src="images/R1-06467-022A.JPG" onclick="showDarkbox('images/R1-06467-022A.JPG')">
+        <img src="images/R1-06467-026A.JPG" onclick="showDarkbox('images/R1-06467-026A.JPG')">
     </div>
 
     <div style="display: none;">
@@ -112,6 +118,42 @@
     <footer>
         <p>copyright enzo 20XX - last modified 12/23/2023</p>
     </footer>
+
+    <script>
+        let darkboxIsVisible = false;
+
+        function showDarkbox(url) {
+            if(!darkboxIsVisible) {
+                darkboxIsVisible = true;
+                let x = (window.innerWidth - 1280) / 2;
+                let y = window.scrollY + 50;
+
+                let div = document.createElement("div");
+                div.id = "darkbox";
+                div.innerHTML = `<img class="darkboximg" src="${url}" />`
+                document.body.appendChild(div);
+
+                let box = document.getElementById('darkbox');
+                box.style.left = x.toString()+"px";
+                box.style.top = y.toString()+"px";
+                box.style.height = 'auto';
+
+                box.addEventListener('click', (event) => {
+                    let element = document.getElementById('darkbox');
+                    element.parentNode.removeChild(element);
+                    darkboxIsVisible = false;
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if(event.keyCode === 27 && darkboxIsVisible){
+                        let element = document.getElementById('darkbox');
+                        element.parentNode.removeChild(element);
+                        darkboxIsVisible = false;
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>
