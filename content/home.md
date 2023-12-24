@@ -1,5 +1,5 @@
 # Hello 
-I work on things that sometimes go on the Internet.
+I am a student and software engineer working on whatever
 
 If you want to look at things I'm working on currently, check [here.](/now)
 If you want to see things I've already made, check [here.](/projects)

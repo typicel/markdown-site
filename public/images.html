@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typicel.me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link id="page-theme" rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css" type="text/css">
+    <style>
+        body>footer {
+            margin-top: 7em;
+            padding-bottom: 1.5em;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        body {
+            max-width: 50em!important;
+        }
+
+        .main-header>h1 {
+            color: #bae8e2;
+        }
+
+        #gallery {
+            line-height:0;
+            -webkit-column-count:5; /* split it into 5 columns */
+            -webkit-column-gap:5px; /* give it a 5px gap between columns */
+            -moz-column-count:5;
+            -moz-column-gap:5px;
+            column-count:5;
+            column-gap:5px;
+        }
+
+        #gallery img {
+            width: 100% !important;
+            height: auto !important;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 1200px) {
+            #gallery {
+                -moz-column-count:    4;
+                -webkit-column-count: 4;
+                column-count:         4;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            #gallery {
+                -moz-column-count:    3;
+                -webkit-column-count: 3;
+                column-count:         3;
+            }
+        }
+
+        @media (max-width: 800px) {
+            #gallery {
+                -moz-column-count:    2;
+                -webkit-column-count: 2;
+                column-count:         2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #gallery {
+                -moz-column-count:    1;
+                -webkit-column-count: 1;
+                column-count:         1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>enzo</h1>
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/now">Now</a>
+            <a href="/projects">Projects</a>
+            <a href="https://www.tumblr.com/typicel">Design Blog</a>
+            <a href="/posts">Posts</a>
+        </div>
+    </header>
+
+    <div id="gallery">
+        <img src="images/R1-06467-001A.JPG">
+        <img src="images/R1-06467-002A.JPG">
+        <img src="images/R1-06467-009A.JPG">
+        <img src="images/R1-06467-014A.JPG">
+        <img src="images/R1-06467-016A.JPG">
+        <img src="images/R1-06467-027A.JPG">
+        <img src="images/R1-06467-033A.JPG">
+    </div>
+
+    <div style="display: none;">
+        <a rel="me" href="https://mastodon.social/@endatronix">Mastodon</a>
+    </div>
+
+    <footer>
+        <p>copyright enzo 20XX - last modified 8/17/2023</p>
+    </footer>
+</body>
+
+</html>
