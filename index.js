@@ -68,4 +68,13 @@ if (numPosts === 0) {
     fs.writeFileSync('./public/posts.html', template);
 }
 
+let gallery_template = fs.readFileSync('gallery_template.html', 'utf8');
+let images = fs.readdirSync('./public/images').map(file => {
+    if(!file.endsWith('.JPG') && !file.endsWith('.PNG') && !file.endsWith('.jpg')) return;
 
+    return `<img src=${'images/' + file} onclick="showDarkbox('${'images/' + file}')" />\n`
+})
+
+gallery_template = gallery_template.replace('{{content}}', images);
+gallery_template = gallery_template.replace(/[,]/, '');
+fs.writeFileSync('./public/gallery.html', gallery_template);
