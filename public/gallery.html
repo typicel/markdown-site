@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css">
     <style>
@@ -43,7 +44,8 @@
 
     <h1>Photo Portfolio</h1>
     <p>Recently as a hobby I've taken up photography, both digital and film. Below you can see a few pieces I think are worthy of attention</p>
-    <div class="grid" data-masonry='{"itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": true, "gutter": 10}'>
+    <!-- <div class="grid" data-masonry='{"itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": true, "gutter": 10}'> -->
+    <div class="grid">
         <div class="grid-sizer"></div>
         <div class="grid-item"><img src="images/ceasar.jpg"><p><i>Shot on Cinestill 800T</i></p></div>
 
@@ -66,6 +68,20 @@
     <footer>
         <p>&copy; enzo 20XX • last modified 3/28/2024</p>
     </footer>
+
+    <script>
+        let grid = document.querySelector('.grid')
+        var masonry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            gutter: 10
+        })
+
+        imagesLoaded(grid).on('progress', function () {
+            masonry.layout()
+        })
+    </script>
 </body>
 
 </html>
