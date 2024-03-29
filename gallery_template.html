@@ -16,8 +16,9 @@
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@nishanths/zoom.js@4.4.0/dist/zoom.min.css" rel="stylesheet">
+
     <style>
         .grid > div > p {
             padding: 3px;
@@ -27,11 +28,36 @@
             max-width: 100rem;
         }
 
+        .zoom-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
         .grid-sizer,
         .grid-item {
             width: 20%;
         }
-    </style>
+        /* Masonry one item on mobile */
+        @media screen and (max-width:767px) {
+            .gallery-masonry-wrapper.gallery-masonry-list--ready {
+            height: auto !important;
+        }
+        figure.gallery-masonry-item {
+            position: relative !important;
+            width: 100% !important;
+            transform: unset !important;
+        }
+        .gallery-masonry-item-wrapper {
+            height: auto !important;
+        }
+        .gallery-masonry .gallery-masonry-item[data-loaded] img {
+            width: 100% !important;
+        }
+        .gallery-masonry {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        }
+        </style>
 </head>
 
 <body>
@@ -58,7 +84,9 @@
         <p>&copy; enzo 20XX • last modified 3/28/2024</p>
     </footer>
 
-    <script>
+    <script type="module">
+        import { zoom } from 'https://cdn.jsdelivr.net/npm/@nishanths/zoom.js@4.4.0/+esm'
+
         let grid = document.querySelector('.grid')
         var masonry = new Masonry(grid, {
             itemSelector: '.grid-item',
@@ -69,6 +97,11 @@
 
         imagesLoaded(grid).on('progress', function () {
             masonry.layout()
+            let imgs = document.querySelectorAll('img') 
+            imgs.forEach(img => {
+                img.classList.add('zoom-cursor')
+                img.addEventListener('click', () => { zoom(img) })
+            })
         })
     </script>
 </body>
