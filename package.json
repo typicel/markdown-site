@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "r": "node index.js && python3 -m http.server 8000 -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,0 +1,29 @@
+{
+    "images": [
+        {
+            "src": "images/ceasar.jpg",
+            "info": "Shot on Cinestill 800T"
+        },
+        {
+            "src": "images/cosmo.jpg",
+            "info": "Shot on Cinestill 800T"
+        },
+        {
+            "src": "images/reflection.jpg",
+            "info": "Shot on Cinestill 800T"
+        },
+        {
+            "src": "images/airport.jpg",
+            "info": "Shot on Portra 400"
+        },
+        {
+            "src": "images/train.jpg",
+            "info": "Shot on Kodak Gold 200"
+        },
+        {
+            "src": "images/paris.jpg",
+            "info": "Shot on Kodak Portra 400"
+        }
+
+    ]
+}
