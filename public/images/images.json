@@ -23,6 +23,9 @@
         {
             "src": "images/paris.jpg",
             "info": "Shot on Kodak Portra 400"
+        },
+        {
+            "src": "images/"
         }
 
     ]
