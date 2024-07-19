@@ -2,28 +2,53 @@
     "images": [
         {
             "src": "images/ceasar.jpg",
-            "info": "Shot on Cinestill 800T"
+            "info": "Cinestill 800T"
         },
         {
             "src": "images/cosmo.jpg",
-            "info": "Shot on Cinestill 800T"
+            "info": "Cinestill 800T"
+        },
+        {
+            "src": "images/botanicbench.jpg",
+            "info": "Ilford HP5 (+2)"
         },
         {
             "src": "images/reflection.jpg",
-            "info": "Shot on Cinestill 800T"
+            "info": "Cinestill 800T"
+        },
+        {
+            "src": "images/botanicpicnic.jpg",
+            "info": "Ilford HP5 (+2)"
+        },
+        {
+            "src": "images/reflection.jpg",
+            "info": "Cinestill 800T"
         },
         {
             "src": "images/airport.jpg",
-            "info": "Shot on Portra 400"
+            "info": "Portra 400"
+        },
+        {
+            "src": "images/botanichouse.jpg",
+            "info": "Ilford HP5 (+2)"
         },
         {
             "src": "images/train.jpg",
-            "info": "Shot on Kodak Gold 200"
+            "info": "Kodak Gold"
         },
         {
             "src": "images/paris.jpg",
-            "info": "Shot on Kodak Portra 400"
+            "info": "Portra 400"
+        },
+        {
+            "src": "images/botanicbird.jpg",
+            "info": "Ilford HP5 (+2)"
+        },
+        {
+            "src": "images/rmnpbench.jpg",
+            "info": "Cinestill 400D"
         }
+
 
     ]
 }

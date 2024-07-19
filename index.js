@@ -38,7 +38,7 @@ let data_file = fs.readFileSync('./public/images/images.json', 'utf8');
 let data = JSON.parse(data_file);
 
 let images = data.images.map(image => {
-    return `<div class="grid-item"><img src="${image.src}"><p><i>${image.info}</i></p></div>\n`
+    return `<div class="grid-item" style="padding-bottom: 20px;"><img src="${image.src}"><p style="color: #93969a;"><i>${image.info}</i></p></div>\n`
 })
 let image_string = images.join('\n');
 
