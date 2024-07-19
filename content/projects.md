@@ -5,6 +5,8 @@ These are all things that I've created in the past. Most of these I'm not workin
 ## Loopover
 *Winner of Best Beginner Hack at [HackCU 10](https://devpost.com/software/loopover)*
 A 2D Rubix Cube-style puzzle game for iOS devices. Based on carykh's [Loopover](https://openprocessing.org/sketch/580366/). Made natively using Swift and SwiftUI.
+[Test on TestFlight](https://testflight.apple.com/join/kLgqbCBJ)
+[View on GitHub](https://github.com/typicel/loopover-ios)
 
 <!-- insert image -->
 <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
